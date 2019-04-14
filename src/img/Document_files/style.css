@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 1.2rem;
+  background: green;
+  padding-left: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  width: 1.6rem;
+  height: 0.53333rem;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: auto;
+  background: #000;
+}
+
+.banner {
+  width: 100%;
+  height: 5.33333rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.icons .icon {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.26667rem 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.icons .icon i {
+  width: 1.06667rem;
+  height: 1.06667rem;
+  background: url(../img/xuebitu.jpg) no-repeat center;
+  margin-bottom: 0.13333rem;
+}
+
+.con {
+  width: 100%;
+}
+
+.con h1 {
+  padding-left: 0.4rem;
+  line-height: 1.33333rem;
+  color: #fff;
+  font-size: 16px;
+}
+
+.con .items {
+  width: 100%;
+  overflow: auto;
+}
+
+.con .items .item {
+  width: 200%;
+  padding-left: 0.4rem;
+  display: flex;
+}
+
+.con .items .item span {
+  width: 5.33333rem;
+  height: 2.66667rem;
+  background: green;
+  border-radius: 0.4rem;
+  font-size: 18px;
+  color: #fff;
+  margin-right: 0.26667rem;
+  text-align: center;
+  line-height: 2.66667rem;
+}
+
+.con .items .item span:nth-child(even) {
+  background: orange;
+}
+
+.footer {
+  width: 100%;
+  height: 1.2rem;
+  background: #fff;
+}

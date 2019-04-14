@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+b{
+    font-weight: 500;
+}
+i{
+    font-style: normal;
+}
+$htmlfont:37.5px !default;
+@function rem($font){
+    @return $font/$htmlfont*1rem;
+}
+%jz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin w-h($w:100%,$h:100%){
+    width: $w;
+    height: $h;
+}
+html,body{
+    @include w-h;
+}
+.wrap{
+    @include w-h;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    @include w-h(100%,rem(50px));
+    background: #06c1ae;
+    border-bottom: 1px solid #21897d;
+    color: #fff;
+    @extend %jz;
+    .sp{
+        flex: 2;
+        height: 100%;
+        @extend %jz;
+        font-size: 14px;
+        i{
+            margin-top: rem(3px);
+            margin-left: rem(5px);
+        }
+    }
+    .ipt{
+        flex:8;
+        height: 100%;
+        @extend %jz;
+        background: #21897d;
+        height: rem(30px);
+        border-radius: rem(5px);
+        input{
+            @include w-h;
+            border: none;
+            border-radius: rem(5px);
+            background: #21897d;
+        }
+        i{
+            margin: 0 rem(10px);
+        }
+    }
+    ::-webkit-input-placeholder{
+        color: #68dbce;
+    }
+    .right{
+        flex: 2;
+        height: 100%;
+        @extend %jz;
+        flex-direction: column;
+    }
+}
+.main{
+    @include w-h;
+    flex: 1;
+    overflow: hidden;
+    background: #eee;
+    .img-box{
+        height: rem(110px);
+        margin-bottom: rem(1px);
+        img{
+            @include w-h;
+        }
+    }
+    .swipe{
+        padding-bottom: rem(20px);
+        background: #fff;
+        margin-bottom: rem(15px);
+        position: relative;
+    }
+    .icons{
+        width: 100%;
+        height: rem(160px);
+        overflow: hidden;
+        position: relative;       
+    }
+    .icon-wrap{
+        width: 200%;
+        height: rem(160px);
+        position: absolute;
+    }
+    .dot{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: rem(10px);
+        text-align: center;
+        span{
+            display: inline-block;
+            width: rem(10px);
+            height: rem(10px);
+            background: #eee;
+            border-radius: 50%;
+            margin: 0 rem(10px);
+        }
+        span.bg{
+            background: #06c1ae;
+        }
+    }
+    .icon-box{
+        width: 50%;
+        float: left;
+        height: rem(160px);
+        background: #fff;
+        font-size: 14px;
+        @extend %jz;
+        flex-flow: wrap;
+        .icon{
+            @extend %jz;
+            flex-direction: column;
+            width: 20%;
+            height: 50%;
+        }
+        b{
+            width: 40px;
+            height: 40px;
+            background: url(../img/icon.png) no-repeat;
+            background-size: contain;
+            margin-bottom: rem(5px);
+        }
+    }
+    .icon-box1 b{
+        background: url(../img/icon2.png) no-repeat;
+        background-size: contain;
+    }
+    .data-box{
+        width: 100%;
+        padding-left: rem(10px);
+        background: #fff;
+        h1{
+            font-size: 17px;
+            line-height: rem(40px);
+            border-bottom: rem(1px) solid #ccc;
+        }
+        dl{
+            display: flex;
+            align-items: center;
+            height: rem(100px);
+            border-bottom: 1px solid #ccc;
+            img{
+                width: rem(80px);
+                height: rem(80px);
+            }
+            dd{
+                padding-left: rem(10px);
+                height: rem(80px);
+                display: flex;
+                flex-direction: column;
+               p{
+                   flex: 1;
+                   width: rem(265px);
+               }
+               .firstp{
+                   font-size: 17px;
+               }
+               .pp{                   
+                   white-space: nowrap;
+                   overflow: hidden;
+                   text-overflow: ellipsis;
+               }
+               .lastp{
+                   display: flex;
+                   justify-content: space-between;
+                   b{
+                       font-size: 17px;
+                       color: #06c1ae;
+                       margin-right: rem(5px);
+                   }
+                   i{
+                       padding: rem(3px) rem(3px);
+                       border: rem(1px) solid orange;
+                       color: orange;
+                       border-radius: rem(5px);
+                   }
+               }
+            }
+        }
+    }
+    .pulldown,.pullup{
+        width: 100%;
+        height: rem(40px);
+        text-align: center;
+        line-height: rem(40px);
+        font-size: 17px;
+        background: #fff;
+        color: #06c1ae;
+    }
+    .con{
+        position: relative;
+    }
+    .pulldown{
+        position: absolute;
+        top: rem(-40px);
+        left: 0;
+    }
+}
